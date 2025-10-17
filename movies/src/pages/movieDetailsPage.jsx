@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState, useEffect}  from "react";
+import { useParams } from 'react-router';
 import MovieHeader from "../components/headerMovie/";
 import MovieDetails from "../components/movieDetails/";
 import Grid from "@mui/material/Grid";
