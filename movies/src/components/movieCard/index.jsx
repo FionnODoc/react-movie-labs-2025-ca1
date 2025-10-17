@@ -12,7 +12,8 @@ import IconButton from "@mui/material/IconButton";
 import Avatar from '@mui/material/Avatar';
 import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png'
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { MoviesContext } from "../../contexts/moviesContext";
 
 export default function MovieCard({ movie, action }) {
