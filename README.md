@@ -1,14 +1,41 @@
-React Movie Labs (TMDB Client)
-A Vite + React app that explores TMDB data as part of the Movie App labs. It uses React Router for navigation, Material UI for UI components, and TanStack React Query for data fetching and caching.
+TMDB Client
+
+A Vite React app that explores TMDB data with React Router, Material UI, and TanStack React Query.
 
 Features
-Discover Movies (Home)
-Movie Details page with images and reviews
-Favorites list (add/remove on cards)
-Write a Review form with Snackbar acknowledgement
-Upcoming Movies page (/movies/upcoming)
-PlaylistAdd icon on Upcoming page cards
-Must Watch list (via “Add to Playlist” on Upcoming)
-Note: Some steps may be committed incrementally per the lab exercises.
+- Discover movies
+- Upcoming
+- Popular
+- Top Rated
+- Now Playing
+- Movie details with images, cast, reviews, and recommendations
+- Favorites list
+- Person details with their movies
+- Search with pagination
+- Name and genre filtering, with sorting options
 
-![5CWK86W](https://github.com/user-attachments/assets/9c15b77b-54ee-4601-adca-d45408b335ba)
+Routes
+- /
+- /movies/upcoming
+- /movies/popular
+- /movies/top-rated
+- /movies/now-playing
+- /movies/favorites
+- /movies/:id
+- /reviews/:id
+- /reviews/form
+- /people/:id
+- /search
+
+Setup
+1. In the movies folder run:
+	- npm install
+	- npm run dev
+2. Create movies/.env.local with:
+	- VITE_TMDB_KEY=your_api_key
+
+Tech
+- React, Vite
+- MUI
+- React Router
+- TanStack React Query
