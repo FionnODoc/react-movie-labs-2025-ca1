@@ -71,6 +71,20 @@ const handleChange = (e, type, value) => {
       type="search"
       variant="filled"
       value={props.titleFilter}
+            <FormControl sx={{...formControl}}>
+              <InputLabel id="sort-label">Sort by</InputLabel>
+              <Select
+                labelId="sort-label"
+                id="sort-select"
+                value={props.sortBy || ""}
+                onChange={(e) => handleChange(e, "sort", e.target.value)}
+              >
+                <MenuItem value="">None</MenuItem>
+                <MenuItem value="rating">Rating</MenuItem>
+                <MenuItem value="popularity">Popularity</MenuItem>
+                <MenuItem value="title">Title</MenuItem>
+              </Select>
+            </FormControl>
       onChange={handleTextChange}
     />
 
