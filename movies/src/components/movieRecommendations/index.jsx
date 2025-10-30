@@ -4,6 +4,7 @@ import { getMovieRecommendations } from "../../api/tmdb-api";
 import Spinner from "../spinner";
 import Typography from "@mui/material/Typography";
 import MovieList from "../movieList";
+import Grid from "@mui/material/Grid";
 import AddToFavoritesIcon from "../cardIcons/addToFavorites";
 
 const MovieRecommendations = ({ movieId }) => {
@@ -20,7 +21,9 @@ const MovieRecommendations = ({ movieId }) => {
   return (
     <>
       <Typography variant="h6" sx={{ mt: 3, mb: 1 }}>Recommendations</Typography>
-      <MovieList movies={movies} action={(m) => <AddToFavoritesIcon movie={m} />} />
+      <Grid container sx={{flex: "1 1 500px"}}>
+        <MovieList movies={movies} action={(m) => <AddToFavoritesIcon movie={m} />} />
+      </Grid>
     </>
   );
 };
